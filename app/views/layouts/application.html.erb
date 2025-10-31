@@ -24,6 +24,12 @@
   </head>
 
   <body>
+    <header class="header">
+       <p class="header_pageTitle">Boards</p>
+      <div class="dropdown">
+        <%= image_tag '', class: 'header_avatar dropbtn' %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
