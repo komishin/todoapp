@@ -1,0 +1,38 @@
+@import '_variables';
+
+input,select {
+  &.text {
+    width: 100%;
+    margin-top: 4px;
+    padding: 16px 24px;
+    background-color: #F4F4F4;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+.field{
+    margin-top: 33px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.links {
+  font-size: 18px;
+  margin-top: 33px;
+  padding: 5px 20px;
+  background-color: #e3e8b5;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 8px 8px;
+  min-height: 440px;
+  resize: vertical;
+  border: 1px solid #EBEBEB;
+}

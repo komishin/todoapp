@@ -1,0 +1,33 @@
+@import '_variables'; 
+
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 16px 0;
+  font-weight: bold;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+.actions{
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 32px 26px;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: solid 1px $primary-color;
+  width: 100%;
+  text-align: center;
+  color: $primary-color;
+  padding: 16px 0;
+  font-weight: bold;
+}

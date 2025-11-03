@@ -4,6 +4,32 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+input.text, select.text {
+  width: 100%;
+  margin-top: 4px;
+  padding: 16px 24px;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+}
+
+.field {
+  margin-top: 33px;
+}
+
+label {
+  font-size: 18px;
+}
+
+textarea {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 8px 8px;
+  min-height: 440px;
+  resize: vertical;
+  border: 1px solid #EBEBEB;
+}
+
 html {
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -26,7 +52,6 @@ body {
   font-size: 18px;
   color: #000000;
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
 }
 
 a {
@@ -35,6 +60,6 @@ a {
 }
 
 .container {
-  padding: 16px 16px;
+  padding: 32px 26px;
   width: 100%;
 }
