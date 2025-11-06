@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Board.create({ name: 'Sample Board', description: 'This is a sample board created during seeding.', user_id: 1 })
+Board.create({ name: 'Sample Board', description: 'test test test test test test test test test test test', user_id: 1 })
