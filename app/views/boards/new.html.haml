@@ -1,13 +1,12 @@
 .container
   %h2 New Board
-  = form_with(model: @board, local: true) do |f|
-    - if @board.errors.any?
-      #error_explanation
-        %h2= "#{pluralize(@board.errors.count, 'error')} prohibited this board from being saved:"
-        %ul
-          - @board.errors.full_messages.each do |msg|
-            %li= msg
 
+  - if @board.errors.any?
+    %ul
+      - @board.errors.full_messages.each do |message|
+        %li= message
+
+  = form_with(model: @board, local: true) do |f|
     %div.field
       = f.label :name, 'Name'
       = f.text_field :name, class: 'text'
@@ -18,3 +17,4 @@
 
     %div.actions
       = f.submit 'Submit', class: 'btn-primary'
+
