@@ -2,14 +2,28 @@ class BoardsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @boards = current_user.boards.all
-  end
-
-  def new
-    @board = current_user.boards.new
+    @boards = Board.all
   end
 
   def show
-    @board = current_user.boards.find(params[:id])
+    @board = Board.find(params[:id])
+  end
+
+  def new
+    @board = Board.new
+  end
+
+  def create
+    @board = Board.new(board_params)
+    if @board.save
+      redirect_to board_path(@board)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+  def board_params
+    params.require(:board).permit(:name, :description)
   end
 end
