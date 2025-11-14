@@ -1,6 +1,6 @@
 input.text, select.text {
   width: 100%;
-  margin-top: 4px;
+  margin-top: 7px;
   padding: 16px 24px;
   background-color: #F4F4F4;
   border: none;
@@ -28,7 +28,9 @@ textarea {
   width: 100%;
   margin: 8px 0px;
   padding: 8px 8px;
-  min-height: 440px;
+  min-height: 203px;
   resize: vertical;
-  border: 1px solid #EBEBEB;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+  border: none;
 }

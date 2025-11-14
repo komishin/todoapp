@@ -1,0 +1,63 @@
+@import '_variables';
+
+.cards{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.card{
+    border-radius: 10px;
+    background-color: #F4F4F4;
+}
+
+.card_content{
+    width: 100%;
+    min-height: 161px;
+    padding: 32px 17px 20px 17px;
+}
+
+.card_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_name{
+    font-size: $font-lg;
+    font-weight: 400;
+}
+
+.card_description{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.4;
+    margin-top: 4px;
+}
+
+.author_icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 29px;
+}
+
+.action_icon{
+    width: 24px;
+    height: 6px;
+}
+
+.card_content_new{
+  width: 100%;
+  min-height: 161px;
+  padding: 32px 17px 20px 17px;
+  font-size: $font-lg;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 1);
+}
