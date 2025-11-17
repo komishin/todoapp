@@ -1,19 +1,24 @@
 .container
-    %h2 Brackets
-    .cards
+  %h2 Brackets
+  .cards
     - @cards.each do |card|
-        -#= link_to board_path(board) do #
-
-        .card
+      .card
+        - if card.eyecatch.attached?
+          .card_image
+            = image_tag card.eyecatch
         .card_content
-            .card_title
-            .card_name
+          .card_title
+          .card_task_name
             = card.name
-            .card_description
+          .card_task_description
             = card.description
-            .card_deadline
-            = card.deadline
-            .card_author
-            = image_tag 'Oval.png', class: 'author_icon'
+          .card_deadline
+            = l card.deadline, format: :short
+          .card_footer
+            .card_messenger
+              = image_tag 'Oval.png', class: 'messenger_icon'
+            .card_message
+              %p.message_count= 23
+              = image_tag 'message.png', class: 'message_icon'
     .card_content_new
-        = link_to '+ Add new card' #, new_board_path, class: 'card_new_link'
+      = link_to '+ Add new card' , new_card_path, class: 'card_new_link'

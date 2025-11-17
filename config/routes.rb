@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   resources :boards, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
-  resources :cards, only: [:index]
+  resources :cards, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 end

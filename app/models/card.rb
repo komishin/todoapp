@@ -11,6 +11,8 @@
 #
 
 class Card < ApplicationRecord
+  has_one_attached :eyecatch
+
   validates :name, presence: true
   validates :description, presence: true
   validates :deadline, presence: true

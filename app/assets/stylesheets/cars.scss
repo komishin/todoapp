@@ -1,0 +1,42 @@
+@import '_variables';
+
+.card_task_name{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.card_task_description{
+    margin-top: 9px;
+}
+
+.card_deadline{
+    margin-top: 9px;
+}
+
+.card_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_footer{
+    margin-top: 36px;
+}
+
+.messenger_icon{
+    width: 30px;
+    height: 30px;
+}
+
+.card_message{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+}
+
+.message_icon{
+    width: 20px;
+    height: 20px;
+}
