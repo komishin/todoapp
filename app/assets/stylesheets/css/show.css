@@ -1,7 +1,14 @@
+.show_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
 .show_name {
   font-size: 26px;
   font-weight: 800;
-  margin-bottom: 32px;
 }
 
 .show_description {

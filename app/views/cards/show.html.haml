@@ -1,6 +1,13 @@
 .container
-  %h2.show_name
-    = @card.name
+  .show_title
+    %h2.show_name
+      = @card.name
+    .board_detail_actions
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn action_icon'
+        .dropdown-content.mini
+          = link_to '編集する'#, edit_board_path(board)
+          = link_to '削除する'#, board_path(board), data: { turbo_method: 'delete', turbo_confirm: '本当に削除してもよろしいですか？' }
   - if @card.eyecatch.attached?
     .card_image
       = image_tag @card.eyecatch
