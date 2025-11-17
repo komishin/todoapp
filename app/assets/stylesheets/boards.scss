@@ -10,12 +10,21 @@
 .card{
     border-radius: 10px;
     background-color: #F4F4F4;
+    padding: 20px;
+}
+
+.card_image{
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
 }
 
 .card_content{
     width: 100%;
     min-height: 161px;
-    padding: 32px 17px 20px 17px;
+    padding-top: 32px;
 }
 
 .card_title{
