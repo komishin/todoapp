@@ -1,0 +1,12 @@
+.container
+  %h2.show_name
+    = @card.name
+  - if @card.eyecatch.attached?
+    .card_image
+      = image_tag @card.eyecatch
+  .show_description
+    = @card.description
+  .show_deadline
+    = l @card.deadline, format: :short
+  .show_comment_new
+    = link_to '+ Add new comment'#, new_card_path, class: 'card_new_link'
