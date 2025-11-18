@@ -36,6 +36,12 @@ class CardsController < ApplicationController
     end
   end
 
+  def destroy
+    card = Card.find(params[:id])
+    card.destroy!
+    redirect_to cards_path, status: :see_other, notice: '削除に成功しました'
+  end
+
   private
   def card_params
     params.require(:card).permit(:name, :description, :deadline, :eyecatch)
