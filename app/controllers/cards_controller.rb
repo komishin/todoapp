@@ -1,10 +1,11 @@
 class CardsController < ApplicationController
+  before_action :set_card, only: [:show, :edit, :update]
+
   def index
     @cards = Card.all
   end
 
   def show
-  @card = Card.find(params[:id])
   end
 
   def new
@@ -23,11 +24,9 @@ class CardsController < ApplicationController
   end
 
   def edit
-    @card = Card.find(params[:id])
   end
 
   def update
-    @card = Card.find(params[:id])
     if @card.update(card_params)
       redirect_to card_path(@card), notice: '更新できました'
     else
@@ -45,5 +44,9 @@ class CardsController < ApplicationController
   private
   def card_params
     params.require(:card).permit(:name, :description, :deadline, :eyecatch)
+  end
+
+  def set_card
+    @card = Card.find(params[:id])
   end
 end
