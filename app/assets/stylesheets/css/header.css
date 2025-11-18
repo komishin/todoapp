@@ -5,3 +5,13 @@
   justify-content: space-between;
   align-items: center;
 }
+.header_logos {
+  min-width: 0;
+  display: flex;
+}
+.header_logos img {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+}

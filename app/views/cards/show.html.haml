@@ -1,0 +1,19 @@
+.container
+  .show_title
+    %h2.show_name
+      = @card.name
+    .board_detail_actions
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn action_icon'
+        .dropdown-content.mini
+          = link_to 'Edit', edit_card_path(@card)
+          = link_to 'Delete', card_path(@card), data: { turbo_method: 'delete', turbo_confirm: '本当に削除してもよろしいですか？' }
+  - if @card.eyecatch.attached?
+    .card_image
+      = image_tag @card.eyecatch
+  .show_description
+    = @card.description
+  .show_deadline
+    = l @card.deadline, format: :short
+  .show_comment_new
+    = link_to '+ Add new comment'#, new_card_path, class: 'card_new_link'
